@@ -28,8 +28,6 @@ export default function Main() {
     })
   }
 
-  console.log(allMemes)
-
   return (
     <main>
       <div className="form">
