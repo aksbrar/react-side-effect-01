@@ -9,12 +9,17 @@ export default function Main() {
     imgUrl : "http://i.imgflip.com/1bij.jpg"
   })
 
+  function handleChange(event) {
+    const {value} = event.currentTarget
+    setMemeData(prev => {return {...prev, topText : value}})
+  }
+
   return (
     <main>
       <div className="form">
         <label>
           Top Text
-          <input type="text" placeholder="One does not simply" name="topText" />
+          <input type="text" placeholder="One does not simply" name="topText" onChange={handleChange}/>
         </label>
 
         <label>
